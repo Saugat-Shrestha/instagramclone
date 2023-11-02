@@ -11,7 +11,9 @@ class instagram extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      color: Colors.amber,
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(primarySwatch: Colors.grey),
       home: HomePage(),
     );
   }
