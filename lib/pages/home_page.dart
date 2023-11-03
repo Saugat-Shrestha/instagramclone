@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:instagramclone/pages/home/home.dart';
+import 'package:instagramclone/pages/profile/profile.dart';
+import 'package:instagramclone/pages/reels/reels.dart';
+import 'package:instagramclone/pages/search/search.dart';
+import 'package:instagramclone/pages/shop/shop.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -19,10 +23,10 @@ class _HomePageState extends State<HomePage> {
 
   final List<Widget> _children = [
     Home(),
-    Center(child: Text("s")),
+    Search(),
     Center(child: Text("hello")),
-    Center(child: Text("hello")),
-    Center(child: Text("hello")),
+    Shop(),
+    Profile(),
   ];
 
   @override
