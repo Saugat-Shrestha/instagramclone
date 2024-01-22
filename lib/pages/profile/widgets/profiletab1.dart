@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagramclone/constants.dart';
 
 class profiletab1 extends StatelessWidget {
   const profiletab1({super.key});
@@ -13,7 +14,7 @@ class profiletab1 extends StatelessWidget {
         return Padding(
           padding: const EdgeInsets.all(2.0),
           child: Container(
-            color: Colors.pink,
+            child: Image.asset(image),
             //  height: 10,
             //  width: 10,
             //decoration: BoxDecoration(border: Border.all(color: Colors.black)),

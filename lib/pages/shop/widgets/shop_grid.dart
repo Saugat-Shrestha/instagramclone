@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagramclone/constants.dart';
 
 class ShopGrid extends StatelessWidget {
   const ShopGrid({super.key});
@@ -12,7 +13,7 @@ class ShopGrid extends StatelessWidget {
         return Padding(
           padding: const EdgeInsets.all(8.0),
           child: Container(
-            color: Colors.amber,
+            child: Image.asset(image),
           ),
         );
       },

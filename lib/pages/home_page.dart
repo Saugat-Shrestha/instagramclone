@@ -33,18 +33,26 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: _children[_selectedBar],
-      bottomNavigationBar: BottomNavigationBar(
-          type: BottomNavigationBarType.fixed,
-          currentIndex: _selectedBar,
-          onTap: _barSelected,
-          items: [
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-            BottomNavigationBarItem(icon: Icon(Icons.search), label: "Search"),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.video_call), label: "Reels"),
-            BottomNavigationBarItem(icon: Icon(Icons.shop), label: "Shop"),
-            BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
-          ]),
+      bottomNavigationBar: Theme(
+        data: ThemeData(
+            splashFactory: NoSplash.splashFactory,
+            splashColor: Colors.transparent,
+            hoverColor: Colors.transparent),
+        child: BottomNavigationBar(
+            type: BottomNavigationBarType.fixed,
+            currentIndex: _selectedBar,
+            onTap: _barSelected,
+            items: [
+              BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.search), label: "Search"),
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.video_call), label: "Reels"),
+              BottomNavigationBarItem(icon: Icon(Icons.shop), label: "Shop"),
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.person), label: "Profile"),
+            ]),
+      ),
     );
   }
 }

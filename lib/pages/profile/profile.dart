@@ -5,6 +5,8 @@ import 'package:instagramclone/pages/profile/widgets/profiletab1.dart';
 import 'package:instagramclone/pages/profile/widgets/profiletab3.dart';
 import 'package:instagramclone/pages/profile/widgets/profiletab4.dart';
 
+import '../../constants.dart';
+
 class Profile extends StatelessWidget {
   const Profile({super.key});
 
@@ -16,7 +18,7 @@ class Profile extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: Colors.transparent,
           elevation: 0,
-          title: Column(
+          title: const Column(
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -25,7 +27,7 @@ class Profile extends StatelessWidget {
                     children: [
                       Text("Saugthor"),
                       Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 5),
+                        padding: EdgeInsets.symmetric(horizontal: 5),
                         child: Icon(Icons.arrow_downward_rounded),
                       ),
                     ],
@@ -34,7 +36,7 @@ class Profile extends StatelessWidget {
                     children: [
                       Icon(Icons.add),
                       Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 10),
+                        padding: EdgeInsets.symmetric(horizontal: 10),
                         child: Icon(Icons.menu),
                       ),
                     ],
@@ -55,11 +57,10 @@ class Profile extends StatelessWidget {
                     height: 100,
                     width: 100,
                     decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Colors.grey[500],
-                    ),
+                        shape: BoxShape.circle,
+                        image: DecorationImage(image: AssetImage(image))),
                   ),
-                  Expanded(
+                  const Expanded(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
@@ -96,8 +97,8 @@ class Profile extends StatelessWidget {
                 ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(20.0),
+            const Padding(
+              padding: EdgeInsets.all(20.0),
               child: Column(
                 children: [
                   Row(
@@ -126,14 +127,14 @@ class Profile extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.all(2.0),
                       child: Container(
-                        padding: EdgeInsets.all(5),
+                        padding: const EdgeInsets.all(5),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(5),
                           border: Border.all(
                             color: Colors.grey,
                           ),
                         ),
-                        child: Center(
+                        child: const Center(
                           child: Text(
                             "Edit Profile",
                           ),
@@ -145,14 +146,14 @@ class Profile extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.all(2.0),
                       child: Container(
-                        padding: EdgeInsets.all(5),
+                        padding: const EdgeInsets.all(5),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(5),
                           border: Border.all(
                             color: Colors.grey,
                           ),
                         ),
-                        child: Center(
+                        child: const Center(
                           child: Text(
                             "Share profile",
                           ),
@@ -164,7 +165,7 @@ class Profile extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               child: Row(
                 children: [
                   Stories(text: "Story"),
@@ -174,7 +175,7 @@ class Profile extends StatelessWidget {
                 ],
               ),
             ),
-            TabBar(
+            const TabBar(
               tabs: [
                 Tab(
                   icon: Icon(Icons.grid_3x3_outlined),
@@ -190,7 +191,7 @@ class Profile extends StatelessWidget {
                 ),
               ],
             ),
-            Expanded(
+            const Expanded(
               child: TabBarView(children: [
                 profiletab1(),
                 profiletab2(),

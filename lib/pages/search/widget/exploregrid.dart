@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagramclone/constants.dart';
 
 class exploregrid extends StatelessWidget {
   const exploregrid({super.key});
@@ -12,7 +13,7 @@ class exploregrid extends StatelessWidget {
         return Padding(
           padding: const EdgeInsets.all(8.0),
           child: Container(
-            color: Colors.amber,
+            child: Image.asset(image),
           ),
         );
       },

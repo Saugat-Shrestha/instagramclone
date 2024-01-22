@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../constants.dart';
+
 class profiletab4 extends StatelessWidget {
   const profiletab4({super.key});
 
@@ -13,7 +15,7 @@ class profiletab4 extends StatelessWidget {
         return Padding(
           padding: const EdgeInsets.all(2.0),
           child: Container(
-            color: Colors.grey,
+            child: Image.asset(image),
             //  height: 10,
             //  width: 10,
             //decoration: BoxDecoration(border: Border.all(color: Colors.black)),

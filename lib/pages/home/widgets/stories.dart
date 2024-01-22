@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagramclone/constants.dart';
 
 class Stories extends StatelessWidget {
   final String text;
@@ -14,7 +15,9 @@ class Stories extends StatelessWidget {
             width: 60,
             height: 60,
             decoration: BoxDecoration(
-                shape: BoxShape.circle, color: Colors.grey.withOpacity(0.5)),
+                image: DecorationImage(image: AssetImage(image)),
+                shape: BoxShape.circle,
+                color: Colors.grey.withOpacity(0.5)),
           ),
           Text(text),
         ],

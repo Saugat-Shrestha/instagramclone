@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagramclone/constants.dart';
 
 class Post extends StatelessWidget {
   final String text;
@@ -20,11 +21,12 @@ class Post extends StatelessWidget {
                     height: 40,
                     width: 40,
                     decoration: BoxDecoration(
+                      image: const DecorationImage(image: AssetImage(image)),
                       shape: BoxShape.circle,
                       color: Colors.grey.withOpacity(0.5),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                   Text(text),
@@ -34,9 +36,17 @@ class Post extends StatelessWidget {
             ],
           ),
         ),
-        Container(
-          height: 400,
-          color: Colors.grey.withOpacity(0.5),
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 10),
+          child: Container(
+            height: 400,
+            width: 500,
+          
+            child: Image.asset(
+              image,
+              fit: BoxFit.fitWidth,
+            ),
+          ),
         ),
         Padding(
           padding: const EdgeInsets.all(8.0),
